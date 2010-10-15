@@ -1,0 +1,19 @@
+
+.list{line-height:180%;}
+.list_title{height:24px;line-height:24px;background:#F7F7F7;}
+  .list_title h3{float:left;margin:0;padding:0;margin-left:10px;}
+  .list_title a{float:right;margin-right:10px;}
+.list_content{padding:10px;}
+
+form label{display:block;margin:5px 0;}
+form label span{float:left;display:inline;width:80px;}
+form input.txt, form textarea{border:1px solid #CCC}
+form input.txt{width:500px; height:20px;}
+form textarea{width:500px; height:400px;}
+
+body {font:400 12px/18px arial,ËÎÌו;width:70%;margin:auto;}
+h2 {color: #CC0099;}
+.red {color:red;}
+.f24 {font-size:24px;}
+.code {display:block; border:1px solid #ccc;padding:5px;background-color:#F0F0F0;}
+.result {border:1px solid #ccc;padding:5px;background-color:#E6FFFF;}

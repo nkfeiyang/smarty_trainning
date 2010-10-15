@@ -1,0 +1,12 @@
+log/*.log
+xampp/*
+xampp/**/*
+doc/api
+doc/app
+db/*.sqlite3
+*.swp
+*~
+~*
+*templates_c*
+.DS_Store
+.tmp*~
