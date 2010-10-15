@@ -86,8 +86,7 @@ Output:<br/>
 PHP Source code:<br/>
 {literal}
 <pre class="code">
-  $smarty->assign("str1", "variable");
-  $smarty->assign("str2", "modifier");
+$smary->assign("yesterday", strtotime('-1 day'));
 </pre>
 {/literal}
 <br/>
@@ -95,16 +94,41 @@ Smarty Source code:
 
 {literal}
 <pre class="code">
-{$str1|cat:$str2}
-{$str1|cat:' '|cat:$str2}
-{$str1|cat:' '|cat:$str2|capitalize}
+{$yesterday|date_format:"%D"}
+{$yesterday|date_format:"%Y-%m-%d %H:%M"}
 </pre>
 {/literal}
 
 Output:<br/>
 <div class="result">
-{$str1|cat:$str2}<br/>
-{$str1|cat:' '|cat:$str2}<br/>
-{$str1|cat:' '|cat:$str2|capitalize}
+{$yesterday|date_format:"%D"}<br/>
+{$yesterday|date_format:"%Y-%m-%d %H:%M"}<br/>
+</div>
+
+
+
+<h2>truncate: </h2>
+PHP Source code:<br/>
+{literal}
+<pre class="code">
+  $smarty->assign("article", "Police begin campaign to rundown jaywalkers.");
+</pre>
+{/literal}
+<br/>
+Smarty Source code:
+
+{literal}
+<pre class="code">
+{$yesterday|date_format:"%D"}
+{$yesterday|date_format:"%Y-%m-%d %H:%M"}
+</pre>
+{/literal}
+
+Output:<br/>
+<div class="result">
+{$article|truncate}<br/>
+{$article|truncate:17:""}<br/>
+{$article|truncate:17:"..."}<br/>
+{$article|truncate:17:"...":true}<br/>
 </div>
 {include file="footer.tpl"}

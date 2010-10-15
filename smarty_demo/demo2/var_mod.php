@@ -6,7 +6,7 @@
   $smarty->assign("str1", "variable");
   $smarty->assign("str2", "modifier");
   $smarty->assign("str_long", "variable");
-  $smary->assign("yesterday", strtotime('-1 day'));
+  $smarty->assign("yesterday", strtotime('-1 day'));
   
   
   
