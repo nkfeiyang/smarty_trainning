@@ -5,7 +5,7 @@
 	include('libs/function.php');
 	include('libs/function_string.php');
 	include('libs/db.php');
-	$db_config	= array(
+/*	$db_config	= array(
 						'hostname'	=> '127.0.0.1',
 						'username'	=> 'root',
 						'password'	=> '',
@@ -13,7 +13,7 @@
 					);
   $db = new db();
   $db->connect($db_config);
-  
+  */
   require_once('libs/smarty/Smarty.class.php');
   $smarty = new Smarty;
 

@@ -11,7 +11,7 @@ form input.txt, form textarea{border:1px solid #CCC}
 form input.txt{width:500px; height:20px;}
 form textarea{width:500px; height:400px;}
 
-body {font:400 12px/18px arial,ËÎÌו;width:70%;margin:auto;}
+body {font:400 12px/18px arial,ËÎÌו;width:70%;margin:auto; padding-bottom:20px;}
 h2 {color: #CC0099;}
 .red {color:red;}
 .f24 {font-size:24px;}

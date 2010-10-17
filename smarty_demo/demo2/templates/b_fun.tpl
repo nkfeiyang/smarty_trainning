@@ -136,10 +136,10 @@ PHP Source code:<br/>
 {literal}
 <pre class="code">
   $smarty->assign("people", array(
-							array("name"=>"People1", 10, "男"),	
-							array("name"=>"People2", 19, "女"),
-							array("name"=>"People3", 67, "男"),
-							array("name"=>"People4", 40, "女")							
+							array("name"=>"People1", "age"=>10),	
+							array("name"=>"People2", "age"=>19),
+							array("name"=>"People3", "age"=>67),
+							array("name"=>"People4", "age"=>40)							
 						)
 					);
 </pre>
@@ -149,26 +149,50 @@ Smarty Source code:
 
 {literal}
 <pre class="code">
-{$article}
-{$article|count_characters}
-{$article|count_characters:true}
+{foreach from=$people item=m}
+	{$m.name} ：
+	{if $m.age < 18 }
+		少年组
+	{elseif $m.age >= 18 and $m.age <35}
+		青年组
+	{elseif $m.age >= 35 and $m.age <=60}
+		中年组
+	{else}
+		老年组
+	{/if}
+{/foreach}
 </pre>
 {/literal}
 
 Output:<br/>
 <div class="result">
 {foreach from=$people item=m}
-	{$m.name}
+	{$m.name} ：
+	{if $m.age < 18 }
+		少年组
+	{elseif $m.age >= 18 and $m.age <35}
+		青年组
+	{elseif $m.age >= 35 and $m.age <=60}
+		中年组
+	{else}
+		老年组
+	{/if}
+	<br/>
 {/foreach}
 </div>
 
 
-<h2>cat: </h2>
+<h2>section: </h2>
 PHP Source code:<br/>
 {literal}
 <pre class="code">
-  $smarty->assign("str1", "variable");
-  $smarty->assign("str2", "modifier");
+  $smarty->assign("people", array(
+							array("name"=>"People1", "age"=>10),	
+							array("name"=>"People2", "age"=>19),
+							array("name"=>"People3", "age"=>67),
+							array("name"=>"People4", "age"=>40)							
+						)
+					);
 </pre>
 {/literal}
 <br/>
@@ -176,68 +200,44 @@ Smarty Source code:
 
 {literal}
 <pre class="code">
-{$str1|cat:$str2}
-{$str1|cat:' '|cat:$str2}
-{$str1|cat:' '|cat:$str2|capitalize}
+{section name=user loop=$people}
+	{$people[user].name} : {$people[user].age}
+{/section}
 </pre>
 {/literal}
 
 Output:<br/>
 <div class="result">
-{$str1|cat:$str2}<br/>
-{$str1|cat:' '|cat:$str2}<br/>
-{$str1|cat:' '|cat:$str2|capitalize}
+{section name=user loop=$people}
+	{$people[user].name} : {$people[user].age} <br/>
+{/section}
 </div>
 
-
-
-<h2>date_format: </h2>
-PHP Source code:<br/>
-{literal}
-<pre class="code">
-$smary->assign("yesterday", strtotime('-1 day'));
-</pre>
-{/literal}
 <br/>
 Smarty Source code:
 
 {literal}
 <pre class="code">
-{$yesterday|date_format:"%D"}
-{$yesterday|date_format:"%Y-%m-%d %H:%M"}
+{section name=user loop=$people}
+	{$people[user].name} : {$people[user].age}
+{/section}
 </pre>
 {/literal}
 
 Output:<br/>
 <div class="result">
-{$yesterday|date_format:"%D"}<br/>
-{$yesterday|date_format:"%Y-%m-%d %H:%M"}<br/>
-</div>
-
-
-
-<h2>truncate: </h2>
-PHP Source code:<br/>
-{literal}
-<pre class="code">
-  $smarty->assign("article", "Police begin campaign to rundown jaywalkers.");
-</pre>
-{/literal}
-<br/>
-Smarty Source code:
-
-{literal}
-<pre class="code">
-{$yesterday|date_format:"%D"}
-{$yesterday|date_format:"%Y-%m-%d %H:%M"}
-</pre>
-{/literal}
-
-Output:<br/>
-<div class="result">
-{$article|truncate}<br/>
-{$article|truncate:17:""}<br/>
-{$article|truncate:17:"..."}<br/>
-{$article|truncate:17:"...":true}<br/>
+{section name=user loop=$people}
+	(index={$smarty.section.user.index}) 
+	(iteration={$smarty.section.user.iteration})
+	(rownum={$smarty.section.user.rownum})
+	{if $smarty.section.user.first}
+		<br/>显示第一条记录
+	{/if}	
+	<br/>
+	{$people[user].name} : {$people[user].age} <br/>
+	{if $smarty.section.user.last}
+		显示最后一条记录，共有{$smarty.section.user.total}条记录
+	{/if}
+{/section}
 </div>
 {include file="footer.tpl"}
