@@ -1,4 +1,4 @@
-﻿{include file="header.tpl"}
+{include file="header.tpl"}
 <h1>{$title} 课堂练习</h1>
 <hr>
 <br/>

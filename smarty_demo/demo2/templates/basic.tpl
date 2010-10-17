@@ -1,4 +1,4 @@
-﻿{* Here is a comment *}
+{* Here is a comment *}
 <html>
 <head>
 <title>{$title}</title>

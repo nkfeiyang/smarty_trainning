@@ -6,7 +6,7 @@
   
   $a = $_GET['a'];
   if ($a == 'add'){
-    $smarty->display('tieba/add.tpl');
+    $smarty->display('tieba/add_ref.tpl');
   }
   /*
   elseif($a == 'delete'){
@@ -31,11 +31,16 @@
     $smarty->assign("article_row", $row);
 	
 	$reply_row = $db->row_select($db_reply_name, 'reply_id='.$id);
-    //$reply_row['content'] = html_decode($reply_row['content']);
+    foreach($reply_row as &$r)
+	{
+		$r['content'] = html_decode($r['content']);
+	}
+	unset($r);
+	//$reply_row['content'] = html_decode($reply_row['content']);
 	$smarty->assign("reply_row", $reply_row);
 	
 	
-    $smarty->display('tieba/view.tpl');
+    $smarty->display('tieba/view_ref.tpl');
   }
   elseif ($a == 'reply'){
 	$content = html_encode($_POST['content']);
@@ -82,6 +87,6 @@
     $row = $db->row_select($db_article_name);
     $smarty->assign("row", $row);
     
-    $smarty->display('tieba/index.tpl');
+    $smarty->display('tieba/index_ref.tpl');
   }
 ?>

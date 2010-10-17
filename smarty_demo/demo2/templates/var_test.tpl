@@ -1,1 +1,1 @@
-﻿{include file="header.tpl"}<h1>{$title} 课堂练习</h1><hr><br/>我叫 ____ , 来自 ____, 邮件是 ____, 工作电话是 ____, 手机是____ 。<br/><br/>我已经学习过的课程有：____ 和 ____<br/><br/>尚未学习的课程有：____ 和 ____{include file="footer.tpl"}
+{include file="header.tpl"}<h1>{$title} 课堂练习</h1><hr><br/>我叫 ____ , 来自 ____, 邮件是 ____, 工作电话是 ____, 手机是____ 。<br/><br/>我已经学习过的课程有：____ 和 ____<br/><br/>尚未学习的课程有：____ 和 ____{include file="footer.tpl"}

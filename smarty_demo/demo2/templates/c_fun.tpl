@@ -1,4 +1,4 @@
-﻿{include file="header.tpl"}
+{include file="header.tpl"}
 <h1>{$title}</h1>
 <hr>
 <br/>

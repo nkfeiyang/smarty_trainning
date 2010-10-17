@@ -4,9 +4,14 @@ body{font-size:12px;width:1024px;margin:0 auto;}
   .list_title h3{float:left;margin:0;padding:0;margin-left:10px;}
   .list_title a{float:right;margin-right:10px;}
 .list_content{padding:10px;}
+.reply_content{padding:10px;background:#F7F7F7;}
 
 form label{display:block;margin:5px 0;}
 form label span{float:left;display:inline;width:80px;}
 form input.txt, form textarea{border:1px solid #CCC}
 form input.txt{width:500px; height:20px;}
 form textarea{width:500px; height:400px;}
+
+
+
+

@@ -1,7 +1,9 @@
 <?php
-  require_once('libs/smarty/Smarty.class.php');
+  require_once('../libs/smarty/Smarty.class.php');
   $smarty = new Smarty;
-
+  
+  //print_r($smarty);
+  
   $smarty->compile_check = true;
   $smarty->debugging = false;
 

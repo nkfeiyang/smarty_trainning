@@ -1,4 +1,4 @@
-﻿{include file="header.tpl"}
+{include file="header.tpl"}
 <h1>{$title} 学习</h1>
 <hr>
 
@@ -119,8 +119,10 @@ Smarty Source code:
 
 {literal}
 <pre class="code">
-{$yesterday|date_format:"%D"}
-{$yesterday|date_format:"%Y-%m-%d %H:%M"}
+{$article|truncate}
+{$article|truncate:17:""}
+{$article|truncate:17:"..."}
+{$article|truncate:17:"...":true}
 </pre>
 {/literal}
 
@@ -131,4 +133,26 @@ Output:<br/>
 {$article|truncate:17:"..."}<br/>
 {$article|truncate:17:"...":true}<br/>
 </div>
+
+<h2>调用PHP中的函数: </h2>
+PHP Source code:<br/>
+{literal}
+<pre class="code">
+   $smarty->assign("arr", array(100,101,102,103));
+</pre>
+{/literal}
+<br/>
+Smarty Source code:
+
+{literal}
+<pre class="code">
+ The length of array arr is {$arr|@count} 
+</pre>
+{/literal}
+
+Output:<br/>
+<div class="result">
+ The length of array arr is {$arr|@count} 
+</div>
+
 {include file="footer.tpl"}

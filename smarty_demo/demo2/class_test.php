@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   require_once('config.php');
 
   $smarty->assign("title", "Built-in Functions 测试");

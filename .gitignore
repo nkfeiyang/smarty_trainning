@@ -7,6 +7,6 @@ db/*.sqlite3
 *.swp
 *~
 ~*
-*templates_c*
+*/**/templates_c/*.php
 .DS_Store
 .tmp*~

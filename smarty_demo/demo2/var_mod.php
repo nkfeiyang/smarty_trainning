@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   require_once('config.php');
 
   $smarty->assign("title", "Variable Modifier");
@@ -8,7 +8,7 @@
   $smarty->assign("str_long", "variable");
   $smarty->assign("yesterday", strtotime('-1 day'));
   
-  
+  $smarty->assign("arr", array(100,101,102,103));
   
   
   

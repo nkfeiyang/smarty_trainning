@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require_once('config.php');
 	
 	$title = '嫦娥二号26日迎“最终大考” 将进行月球精细成像';

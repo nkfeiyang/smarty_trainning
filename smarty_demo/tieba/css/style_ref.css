@@ -1,0 +1,221 @@
+body{font-size:12px;width:1024px;margin:0 auto;}
+.list{line-height:180%;}
+.list_title{height:24px;line-height:24px;background:#F7F7F7;}
+  .list_title h3{float:left;margin:0;padding:0;margin-left:10px;}
+  .list_title a{float:right;margin-right:10px;}
+.list_content{padding:10px;}
+.reply_content{padding:10px;background:#F7F7F7;}
+
+
+form label{display:block;margin:5px 0;}
+form label span{float:left;display:inline;width:80px;}
+form input.txt, form textarea{border:1px solid #CCC}
+form input.txt{width:500px; height:20px;}
+form textarea{width:500px; height:200px;}
+
+#thread_list th {
+	background:none repeat scroll 0 0 #EEEEEE;
+	font-weight:normal;
+	height:18px;
+	padding:2px 1px 0 10px;
+	text-align:left;
+}
+
+#thread_list tr {
+	height:28px;
+}
+
+#thread_list tr.thread_alt {
+	background:none repeat scroll 0 0 #EEEEEE;
+}
+
+#thread_list td {
+	padding-left:10px;
+}
+#thread_list a {
+color:black;
+}
+
+#thread_list .thread_title a {
+	color:#261CDC;
+}
+
+#thread_list .thread_title a:visited {
+	color:#800080;
+}
+
+.red {
+color:red;
+}
+
+#thread_title1 {
+	background:none repeat scroll 0 0 #F4F4F4;
+	color:#FFFFFF;
+	height:20px;
+	line-height:20px;
+	padding:6px 0;
+	color:black;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:8px;
+	text-align:left;
+}
+
+
+
+#pb_content, #pb_content td {
+line-height:18px;
+}
+
+#pb_content {
+padding-left:16px;
+}
+
+.post table {
+table-layout:fixed;
+width:100%;
+}
+
+#pb_content, #pb_content td {
+	line-height:18px;
+}
+
+.post .author_anonym {
+	overflow:hidden;
+	padding-top:18px;
+	text-align:right;
+	width:115px;
+}
+
+.post td {
+	padding:1px;
+}
+
+#pb_content td.content {
+line-height:24px;
+}
+
+.floor {
+	color:#4B4B4B;
+	font-size:12px;
+	line-height:18px;
+	padding-right:5px;
+	text-align:right;
+}
+.post .info {
+	padding-right:5px;
+	text-align:right;
+}
+
+ul, form, h2, fieldset {
+	margin:0;
+	padding:0;
+}
+.post .info ul {
+	float:right;
+	list-style:none outside none;
+}
+ul, li {
+	margin:0;
+	padding:0;
+}
+
+.post .info li {
+	display:inline;
+	margin-left:6px;
+}
+
+.post_split {
+	background-color:#FFFFFF;
+	overflow:hidden;
+	padding:0 0 6px;
+}
+
+.post_split .split_line {
+	border-bottom:1px solid #C0C1C1;
+	font-size:0;
+	line-height:0;
+	margin:4px 0 0 1px;
+}
+
+.post .author_anonym {
+	overflow:hidden;
+	padding-top:18px;
+	text-align:right;
+	width:115px;
+}
+
+.post .author ul {
+list-style:none outside none;
+}
+
+.post_icon {
+position:relative;
+}
+
+.post .author .name {
+padding-top:4px;
+}
+#pb_content td.content {
+line-height:24px;
+
+}
+.post {
+background-color:#FFFFFF;
+
+}
+.post table {
+table-layout:fixed;
+width:100%;
+}
+.post input {
+margin:0;
+padding:0;
+}
+.post td {
+padding:1px;
+}
+.post .author ul {
+list-style:none outside none;
+}
+.post .author .name {
+padding-top:4px;
+}
+.post .author li {
+padding-bottom:0;
+}
+.post .follow_info {
+padding-top:5px;
+}
+.post .author {
+overflow:hidden;
+text-align:center;
+width:115px;
+}
+.post .author img.icon {
+border:1px solid #CCCCCC;
+padding:1px;
+width:auto;
+}
+.post .author .has_followed {
+margin:0 auto;
+}
+.post .author .follow {
+margin:0 auto;
+}
+.post .author .unfollow {
+margin:0 auto;
+}
+.author .name a {
+text-decoration:none;
+}
+.author .name a:hover {
+text-decoration:underline;
+}
+.post .author_anonym {
+overflow:hidden;
+padding-top:18px;
+text-align:right;
+width:115px;
+}
+

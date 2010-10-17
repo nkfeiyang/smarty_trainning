@@ -6,7 +6,5 @@
   $smarty->assign("quote.more", "This is quote.more result");
   $smarty->assign("foo", 2);
   $smarty->assign("bar", 3);
-  
-  
   $smarty->display('basic.tpl');
 ?>

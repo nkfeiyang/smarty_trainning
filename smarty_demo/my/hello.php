@@ -1,0 +1,1 @@
+<?php require_once("../libs/smarty/Smarty.class.php"); $smarty = new Smarty();//print_r($smarty);  $smarty->assign("title", "hello smarty");  $smarty->display("hello.tpl");?>

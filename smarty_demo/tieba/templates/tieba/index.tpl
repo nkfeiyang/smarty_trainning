@@ -5,11 +5,8 @@
 {foreach from=$row item=v}
 <div class="list">
   <div class="list_title">
-    <h3><a href="?a=view&id={$v.id}">{$v.title}</a></h3>
-    <a href="javascript:if(window.confirm('Do you want to delete it?')) window.location.href='?a=delete&id={$v.id}'">Delete</a>
-    <a href="?a=edit&id={$v.id}">Edit</a>
-  </div>
-  
+    <a href="?a=view&id={$v.id}">{$v.title}</a>    
+  </div>  
 </div>
 {/foreach}
 
